@@ -63,7 +63,7 @@ export interface HomedSunsetTrigger {
 
 export interface HomedTimeTrigger {
     type: 'time';
-    time: 'string'; //hh:mm
+    time: string; //hh:mm
 }
 
 // Trigger

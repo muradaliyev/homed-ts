@@ -717,7 +717,6 @@
                                     "additionalProperties": false,
                                     "properties": {
                                         "time": {
-                                            "const": "string",
                                             "type": "string"
                                         },
                                         "type": {
