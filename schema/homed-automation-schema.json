@@ -156,7 +156,6 @@
                                     "additionalProperties": false,
                                     "properties": {
                                         "endpoint": {
-                                            "const": "string",
                                             "type": "string"
                                         },
                                         "equals": {
@@ -193,7 +192,6 @@
                                             "type": "string"
                                         },
                                         "endpoint": {
-                                            "const": "string",
                                             "type": "string"
                                         },
                                         "property": {
@@ -219,7 +217,6 @@
                                             "type": "number"
                                         },
                                         "endpoint": {
-                                            "const": "string",
                                             "type": "string"
                                         },
                                         "property": {
@@ -245,7 +242,6 @@
                                             "type": "number"
                                         },
                                         "endpoint": {
-                                            "const": "string",
                                             "type": "string"
                                         },
                                         "property": {
@@ -281,7 +277,6 @@
                                             "type": "array"
                                         },
                                         "endpoint": {
-                                            "const": "string",
                                             "type": "string"
                                         },
                                         "property": {
@@ -530,7 +525,6 @@
                                     "additionalProperties": false,
                                     "properties": {
                                         "endpoint": {
-                                            "const": "string",
                                             "type": "string"
                                         },
                                         "equals": {
@@ -563,7 +557,6 @@
                                             "type": "number"
                                         },
                                         "endpoint": {
-                                            "const": "string",
                                             "type": "string"
                                         },
                                         "property": {
@@ -589,7 +582,6 @@
                                             "type": "number"
                                         },
                                         "endpoint": {
-                                            "const": "string",
                                             "type": "string"
                                         },
                                         "property": {
@@ -625,7 +617,6 @@
                                             "type": "array"
                                         },
                                         "endpoint": {
-                                            "const": "string",
                                             "type": "string"
                                         },
                                         "property": {

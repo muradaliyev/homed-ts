@@ -2,7 +2,7 @@
 
 export interface HomedPropertyTriggerBase {
     type: 'property';
-    endpoint: 'string'; //формате "служба/устройство" или "служба/устройство/N", где N это номер конечной точки для многоканальных устройств.
+    endpoint: string; //формате "служба/устройство" или "служба/устройство/N", где N это номер конечной точки для многоканальных устройств.
     property: string;
 }
 
@@ -74,7 +74,7 @@ export type HomedTrigger = HomedPropertyTrigger | HomedTelegramTrigger | HomedMq
 
 export interface HomedPropertyConditionBase {
     type: 'property';
-    endpoint: 'string'; //формате "служба/устройство" или "служба/устройство/N", где N это номер конечной точки для многоканальных устройств.
+    endpoint: string; //формате "служба/устройство" или "служба/устройство/N", где N это номер конечной точки для многоканальных устройств.
     property: string;
 }
 
