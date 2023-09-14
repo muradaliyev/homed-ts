@@ -7,7 +7,7 @@ export interface HomedPropertyTriggerBase {
 }
 
 export interface HomedPropertyTriggerEquals {
-    equals: 'on' | 'off';
+    equals: string;
 }
 
 export interface HomedPropertyTriggerAbove {
@@ -79,11 +79,11 @@ export interface HomedPropertyConditionBase {
 }
 
 export interface HomedPropertyConditionEquals {
-    equals: 'on' | 'off';
+    equals: string;
 }
 
 export interface HomedPropertyConditionDiffers {
-    differs: 'on' | 'off';
+    differs: string;
 }
 
 export interface HomedPropertyConditionAbove {

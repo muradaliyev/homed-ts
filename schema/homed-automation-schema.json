@@ -129,10 +129,6 @@
                             "type": "string"
                         },
                         "equals": {
-                            "enum": [
-                                "off",
-                                "on"
-                            ],
                             "type": "string"
                         },
                         "property": {
@@ -155,10 +151,6 @@
                     "additionalProperties": false,
                     "properties": {
                         "differs": {
-                            "enum": [
-                                "off",
-                                "on"
-                            ],
                             "type": "string"
                         },
                         "endpoint": {
@@ -631,10 +623,6 @@
                             "type": "string"
                         },
                         "equals": {
-                            "enum": [
-                                "off",
-                                "on"
-                            ],
                             "type": "string"
                         },
                         "property": {
