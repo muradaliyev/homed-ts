@@ -1,0 +1,761 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "additionalProperties": false,
+    "properties": {
+        "$schema": {
+            "type": "string"
+        },
+        "automations": {
+            "items": {
+                "additionalProperties": false,
+                "properties": {
+                    "actions": {
+                        "items": {
+                            "anyOf": [
+                                {
+                                    "additionalProperties": false,
+                                    "properties": {
+                                        "endpoint": {
+                                            "type": "string"
+                                        },
+                                        "increase": {
+                                            "type": "number"
+                                        },
+                                        "type": {
+                                            "const": "property",
+                                            "type": "string"
+                                        }
+                                    },
+                                    "required": [
+                                        "endpoint",
+                                        "increase",
+                                        "type"
+                                    ],
+                                    "type": "object"
+                                },
+                                {
+                                    "additionalProperties": false,
+                                    "properties": {
+                                        "decrease": {
+                                            "type": "number"
+                                        },
+                                        "endpoint": {
+                                            "type": "string"
+                                        },
+                                        "type": {
+                                            "const": "property",
+                                            "type": "string"
+                                        }
+                                    },
+                                    "required": [
+                                        "decrease",
+                                        "endpoint",
+                                        "type"
+                                    ],
+                                    "type": "object"
+                                },
+                                {
+                                    "additionalProperties": false,
+                                    "properties": {
+                                        "endpoint": {
+                                            "type": "string"
+                                        },
+                                        "type": {
+                                            "const": "property",
+                                            "type": "string"
+                                        },
+                                        "value": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "required": [
+                                        "endpoint",
+                                        "type",
+                                        "value"
+                                    ],
+                                    "type": "object"
+                                },
+                                {
+                                    "additionalProperties": false,
+                                    "properties": {
+                                        "chats": {
+                                            "items": {
+                                                "type": "number"
+                                            },
+                                            "type": "array"
+                                        },
+                                        "message": {
+                                            "type": "string"
+                                        },
+                                        "silent": {
+                                            "type": "boolean"
+                                        },
+                                        "type": {
+                                            "const": "telegram",
+                                            "type": "string"
+                                        }
+                                    },
+                                    "required": [
+                                        "message",
+                                        "type"
+                                    ],
+                                    "type": "object"
+                                },
+                                {
+                                    "additionalProperties": false,
+                                    "properties": {
+                                        "command": {
+                                            "type": "string"
+                                        },
+                                        "type": {
+                                            "const": "shell",
+                                            "type": "string"
+                                        }
+                                    },
+                                    "required": [
+                                        "command",
+                                        "type"
+                                    ],
+                                    "type": "object"
+                                },
+                                {
+                                    "additionalProperties": false,
+                                    "properties": {
+                                        "message": {
+                                            "type": "string"
+                                        },
+                                        "retain": {
+                                            "type": "boolean"
+                                        },
+                                        "topic": {
+                                            "type": "string"
+                                        },
+                                        "type": {
+                                            "const": "mqtt",
+                                            "type": "string"
+                                        }
+                                    },
+                                    "required": [
+                                        "message",
+                                        "topic",
+                                        "type"
+                                    ],
+                                    "type": "object"
+                                }
+                            ]
+                        },
+                        "type": "array"
+                    },
+                    "active": {
+                        "type": "boolean"
+                    },
+                    "conditions": {
+                        "items": {
+                            "anyOf": [
+                                {
+                                    "additionalProperties": false,
+                                    "properties": {
+                                        "endpoint": {
+                                            "type": "string"
+                                        },
+                                        "equals": {
+                                            "enum": [
+                                                "off",
+                                                "on"
+                                            ],
+                                            "type": "string"
+                                        },
+                                        "property": {
+                                            "type": "string"
+                                        },
+                                        "type": {
+                                            "const": "property",
+                                            "type": "string"
+                                        }
+                                    },
+                                    "required": [
+                                        "endpoint",
+                                        "equals",
+                                        "property",
+                                        "type"
+                                    ],
+                                    "type": "object"
+                                },
+                                {
+                                    "additionalProperties": false,
+                                    "properties": {
+                                        "differs": {
+                                            "enum": [
+                                                "off",
+                                                "on"
+                                            ],
+                                            "type": "string"
+                                        },
+                                        "endpoint": {
+                                            "type": "string"
+                                        },
+                                        "property": {
+                                            "type": "string"
+                                        },
+                                        "type": {
+                                            "const": "property",
+                                            "type": "string"
+                                        }
+                                    },
+                                    "required": [
+                                        "differs",
+                                        "endpoint",
+                                        "property",
+                                        "type"
+                                    ],
+                                    "type": "object"
+                                },
+                                {
+                                    "additionalProperties": false,
+                                    "properties": {
+                                        "above": {
+                                            "type": "number"
+                                        },
+                                        "endpoint": {
+                                            "type": "string"
+                                        },
+                                        "property": {
+                                            "type": "string"
+                                        },
+                                        "type": {
+                                            "const": "property",
+                                            "type": "string"
+                                        }
+                                    },
+                                    "required": [
+                                        "above",
+                                        "endpoint",
+                                        "property",
+                                        "type"
+                                    ],
+                                    "type": "object"
+                                },
+                                {
+                                    "additionalProperties": false,
+                                    "properties": {
+                                        "below": {
+                                            "type": "number"
+                                        },
+                                        "endpoint": {
+                                            "type": "string"
+                                        },
+                                        "property": {
+                                            "type": "string"
+                                        },
+                                        "type": {
+                                            "const": "property",
+                                            "type": "string"
+                                        }
+                                    },
+                                    "required": [
+                                        "below",
+                                        "endpoint",
+                                        "property",
+                                        "type"
+                                    ],
+                                    "type": "object"
+                                },
+                                {
+                                    "additionalProperties": false,
+                                    "properties": {
+                                        "between": {
+                                            "items": [
+                                                {
+                                                    "type": "number"
+                                                },
+                                                {
+                                                    "type": "number"
+                                                }
+                                            ],
+                                            "maxItems": 2,
+                                            "minItems": 2,
+                                            "type": "array"
+                                        },
+                                        "endpoint": {
+                                            "type": "string"
+                                        },
+                                        "property": {
+                                            "type": "string"
+                                        },
+                                        "type": {
+                                            "const": "property",
+                                            "type": "string"
+                                        }
+                                    },
+                                    "required": [
+                                        "between",
+                                        "endpoint",
+                                        "property",
+                                        "type"
+                                    ],
+                                    "type": "object"
+                                },
+                                {
+                                    "additionalProperties": false,
+                                    "properties": {
+                                        "equals": {
+                                            "type": "string"
+                                        },
+                                        "type": {
+                                            "const": "date",
+                                            "type": "string"
+                                        }
+                                    },
+                                    "required": [
+                                        "equals",
+                                        "type"
+                                    ],
+                                    "type": "object"
+                                },
+                                {
+                                    "additionalProperties": false,
+                                    "properties": {
+                                        "differs": {
+                                            "type": "string"
+                                        },
+                                        "type": {
+                                            "const": "date",
+                                            "type": "string"
+                                        }
+                                    },
+                                    "required": [
+                                        "differs",
+                                        "type"
+                                    ],
+                                    "type": "object"
+                                },
+                                {
+                                    "additionalProperties": false,
+                                    "properties": {
+                                        "above": {
+                                            "type": "string"
+                                        },
+                                        "type": {
+                                            "const": "date",
+                                            "type": "string"
+                                        }
+                                    },
+                                    "required": [
+                                        "above",
+                                        "type"
+                                    ],
+                                    "type": "object"
+                                },
+                                {
+                                    "additionalProperties": false,
+                                    "properties": {
+                                        "below": {
+                                            "type": "string"
+                                        },
+                                        "type": {
+                                            "const": "date",
+                                            "type": "string"
+                                        }
+                                    },
+                                    "required": [
+                                        "below",
+                                        "type"
+                                    ],
+                                    "type": "object"
+                                },
+                                {
+                                    "additionalProperties": false,
+                                    "properties": {
+                                        "between": {
+                                            "items": [
+                                                {
+                                                    "type": "string"
+                                                },
+                                                {
+                                                    "type": "string"
+                                                }
+                                            ],
+                                            "maxItems": 2,
+                                            "minItems": 2,
+                                            "type": "array"
+                                        },
+                                        "type": {
+                                            "const": "date",
+                                            "type": "string"
+                                        }
+                                    },
+                                    "required": [
+                                        "between",
+                                        "type"
+                                    ],
+                                    "type": "object"
+                                },
+                                {
+                                    "additionalProperties": false,
+                                    "properties": {
+                                        "equals": {
+                                            "type": "string"
+                                        },
+                                        "type": {
+                                            "const": "time",
+                                            "type": "string"
+                                        }
+                                    },
+                                    "required": [
+                                        "equals",
+                                        "type"
+                                    ],
+                                    "type": "object"
+                                },
+                                {
+                                    "additionalProperties": false,
+                                    "properties": {
+                                        "differs": {
+                                            "type": "string"
+                                        },
+                                        "type": {
+                                            "const": "time",
+                                            "type": "string"
+                                        }
+                                    },
+                                    "required": [
+                                        "differs",
+                                        "type"
+                                    ],
+                                    "type": "object"
+                                },
+                                {
+                                    "additionalProperties": false,
+                                    "properties": {
+                                        "above": {
+                                            "type": "string"
+                                        },
+                                        "type": {
+                                            "const": "time",
+                                            "type": "string"
+                                        }
+                                    },
+                                    "required": [
+                                        "above",
+                                        "type"
+                                    ],
+                                    "type": "object"
+                                },
+                                {
+                                    "additionalProperties": false,
+                                    "properties": {
+                                        "below": {
+                                            "type": "string"
+                                        },
+                                        "type": {
+                                            "const": "time",
+                                            "type": "string"
+                                        }
+                                    },
+                                    "required": [
+                                        "below",
+                                        "type"
+                                    ],
+                                    "type": "object"
+                                },
+                                {
+                                    "additionalProperties": false,
+                                    "properties": {
+                                        "between": {
+                                            "items": [
+                                                {
+                                                    "type": "string"
+                                                },
+                                                {
+                                                    "type": "string"
+                                                }
+                                            ],
+                                            "maxItems": 2,
+                                            "minItems": 2,
+                                            "type": "array"
+                                        },
+                                        "type": {
+                                            "const": "time",
+                                            "type": "string"
+                                        }
+                                    },
+                                    "required": [
+                                        "between",
+                                        "type"
+                                    ],
+                                    "type": "object"
+                                },
+                                {
+                                    "additionalProperties": false,
+                                    "properties": {
+                                        "days": {
+                                            "items": {
+                                                "type": "number"
+                                            },
+                                            "type": "array"
+                                        },
+                                        "type": {
+                                            "const": "week",
+                                            "type": "string"
+                                        }
+                                    },
+                                    "required": [
+                                        "days",
+                                        "type"
+                                    ],
+                                    "type": "object"
+                                }
+                            ]
+                        },
+                        "type": "array"
+                    },
+                    "delay": {
+                        "type": "number"
+                    },
+                    "name": {
+                        "type": "string"
+                    },
+                    "restart": {
+                        "type": "boolean"
+                    },
+                    "triggers": {
+                        "items": {
+                            "anyOf": [
+                                {
+                                    "additionalProperties": false,
+                                    "properties": {
+                                        "endpoint": {
+                                            "type": "string"
+                                        },
+                                        "equals": {
+                                            "enum": [
+                                                "off",
+                                                "on"
+                                            ],
+                                            "type": "string"
+                                        },
+                                        "property": {
+                                            "type": "string"
+                                        },
+                                        "type": {
+                                            "const": "property",
+                                            "type": "string"
+                                        }
+                                    },
+                                    "required": [
+                                        "endpoint",
+                                        "equals",
+                                        "property",
+                                        "type"
+                                    ],
+                                    "type": "object"
+                                },
+                                {
+                                    "additionalProperties": false,
+                                    "properties": {
+                                        "above": {
+                                            "type": "number"
+                                        },
+                                        "endpoint": {
+                                            "type": "string"
+                                        },
+                                        "property": {
+                                            "type": "string"
+                                        },
+                                        "type": {
+                                            "const": "property",
+                                            "type": "string"
+                                        }
+                                    },
+                                    "required": [
+                                        "above",
+                                        "endpoint",
+                                        "property",
+                                        "type"
+                                    ],
+                                    "type": "object"
+                                },
+                                {
+                                    "additionalProperties": false,
+                                    "properties": {
+                                        "below": {
+                                            "type": "number"
+                                        },
+                                        "endpoint": {
+                                            "type": "string"
+                                        },
+                                        "property": {
+                                            "type": "string"
+                                        },
+                                        "type": {
+                                            "const": "property",
+                                            "type": "string"
+                                        }
+                                    },
+                                    "required": [
+                                        "below",
+                                        "endpoint",
+                                        "property",
+                                        "type"
+                                    ],
+                                    "type": "object"
+                                },
+                                {
+                                    "additionalProperties": false,
+                                    "properties": {
+                                        "between": {
+                                            "items": [
+                                                {
+                                                    "type": "number"
+                                                },
+                                                {
+                                                    "type": "number"
+                                                }
+                                            ],
+                                            "maxItems": 2,
+                                            "minItems": 2,
+                                            "type": "array"
+                                        },
+                                        "endpoint": {
+                                            "type": "string"
+                                        },
+                                        "property": {
+                                            "type": "string"
+                                        },
+                                        "type": {
+                                            "const": "property",
+                                            "type": "string"
+                                        }
+                                    },
+                                    "required": [
+                                        "between",
+                                        "endpoint",
+                                        "property",
+                                        "type"
+                                    ],
+                                    "type": "object"
+                                },
+                                {
+                                    "additionalProperties": false,
+                                    "properties": {
+                                        "chats": {
+                                            "items": {
+                                                "type": "number"
+                                            },
+                                            "type": "array"
+                                        },
+                                        "message": {
+                                            "type": "string"
+                                        },
+                                        "type": {
+                                            "const": "telegram",
+                                            "type": "string"
+                                        }
+                                    },
+                                    "required": [
+                                        "message",
+                                        "type"
+                                    ],
+                                    "type": "object"
+                                },
+                                {
+                                    "additionalProperties": false,
+                                    "properties": {
+                                        "message": {
+                                            "type": "string"
+                                        },
+                                        "topic": {
+                                            "type": "string"
+                                        },
+                                        "type": {
+                                            "const": "mqtt",
+                                            "type": "string"
+                                        }
+                                    },
+                                    "required": [
+                                        "message",
+                                        "topic",
+                                        "type"
+                                    ],
+                                    "type": "object"
+                                },
+                                {
+                                    "additionalProperties": false,
+                                    "properties": {
+                                        "offset": {
+                                            "type": "number"
+                                        },
+                                        "type": {
+                                            "const": "sunrise",
+                                            "type": "string"
+                                        }
+                                    },
+                                    "required": [
+                                        "offset",
+                                        "type"
+                                    ],
+                                    "type": "object"
+                                },
+                                {
+                                    "additionalProperties": false,
+                                    "properties": {
+                                        "offset": {
+                                            "type": "number"
+                                        },
+                                        "type": {
+                                            "const": "sunset",
+                                            "type": "string"
+                                        }
+                                    },
+                                    "required": [
+                                        "offset",
+                                        "type"
+                                    ],
+                                    "type": "object"
+                                },
+                                {
+                                    "additionalProperties": false,
+                                    "properties": {
+                                        "time": {
+                                            "type": "string"
+                                        },
+                                        "type": {
+                                            "const": "time",
+                                            "type": "string"
+                                        }
+                                    },
+                                    "required": [
+                                        "time",
+                                        "type"
+                                    ],
+                                    "type": "object"
+                                }
+                            ]
+                        },
+                        "type": "array"
+                    }
+                },
+                "required": [
+                    "actions",
+                    "active",
+                    "name",
+                    "triggers"
+                ],
+                "type": "object"
+            },
+            "type": "array"
+        },
+        "timestamp": {
+            "type": "number"
+        },
+        "version": {
+            "type": "string"
+        }
+    },
+    "required": [
+        "$schema",
+        "automations"
+    ],
+    "type": "object"
+}
+

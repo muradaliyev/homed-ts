@@ -2,8 +2,10 @@
   "name": "homed",
   "version": "1.0.0",
   "description": "",  
-  "scripts": {    
-    "build-schema": "npx typescript-json-schema ./tsconfig.json HomedRoot -o ./schema/homed-automation-schema.json --required --refs=false --noExtraProps --include=./interface/Homed.ts"
+  "scripts": {
+    "build-schemas":"npm run build-schema && npm run build-schema-noref",
+    "build-schema-noref": "npx typescript-json-schema ./tsconfig.json HomedRoot -o ./schema/homed-automation-schema-noref.json --required --refs=false --noExtraProps --include=./interface/Homed.ts",
+    "build-schema": "npx typescript-json-schema ./tsconfig.json HomedRoot -o ./schema/homed-automation-schema.json --required --noExtraProps --include=./interface/Homed.ts"
   },
   "author": "",
   "license": "ISC",
