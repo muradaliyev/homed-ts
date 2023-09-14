@@ -254,5 +254,8 @@ export interface HomedAutomation {
 // Root
 
 export interface HomedRoot {
+    $schema: string;
     automations: HomedAutomation[];
+    timestamp?: number;
+    version?: string;
 }

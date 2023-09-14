@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",  
   "scripts": {    
-    "build_schema": "npx typescript-json-schema ./tsconfig.json HomedRoot -o ./schema/homed-automation-schema.json --required --refs=false --noExtraProps --include=./interface/Homed.ts"
+    "build-schema": "npx typescript-json-schema ./tsconfig.json HomedRoot -o ./schema/homed-automation-schema.json --required --refs=false --noExtraProps --include=./interface/Homed.ts"
   },
   "author": "",
   "license": "ISC",
