@@ -189,6 +189,7 @@ export type HomedCondition = HomedPropertyCondition | HomedDateCondition | Homed
 
 export interface HomedPropertyActionBase {
     type: 'property';
+    property: string;
     endpoint: string; //формате "служба/устройство" или "служба/устройство/N", где N это номер конечной точки для многоканальных устройств.
 }
 

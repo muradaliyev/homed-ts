@@ -13,6 +13,9 @@
                         "increase": {
                             "type": "number"
                         },
+                        "property": {
+                            "type": "string"
+                        },
                         "type": {
                             "const": "property",
                             "type": "string"
@@ -21,6 +24,7 @@
                     "required": [
                         "endpoint",
                         "increase",
+                        "property",
                         "type"
                     ],
                     "type": "object"
@@ -34,6 +38,9 @@
                         "endpoint": {
                             "type": "string"
                         },
+                        "property": {
+                            "type": "string"
+                        },
                         "type": {
                             "const": "property",
                             "type": "string"
@@ -42,6 +49,7 @@
                     "required": [
                         "decrease",
                         "endpoint",
+                        "property",
                         "type"
                     ],
                     "type": "object"
@@ -50,6 +58,9 @@
                     "additionalProperties": false,
                     "properties": {
                         "endpoint": {
+                            "type": "string"
+                        },
+                        "property": {
                             "type": "string"
                         },
                         "type": {
@@ -62,6 +73,7 @@
                     },
                     "required": [
                         "endpoint",
+                        "property",
                         "type",
                         "value"
                     ],
