@@ -1,6 +1,6 @@
 # homed-ts
 
-Script to generate schema for Homed Automation database json.
+Script to generate schema for Homed Automation database json, to be used in "schema-aware" editors, e.g. VS Code
 
 https://wiki.homed.dev/page/Automation/Database
 
