@@ -1,5 +1,15 @@
 # homed-ts
 
-Script to generate schema for Homed Automation database json
+Script to generate schema for Homed Automation database json.
 
 https://wiki.homed.dev/page/Automation/Database
+
+Sample configuration json with schema enabled
+```
+{
+    "$schema": "https://cdn.jsdelivr.net/gh/muradaliyev/homed-ts/schema/homed-automation-schema.json",
+    "automations": [],
+    "timestamp": 1694690184,
+    "version": "1.0.12"
+}
+```
