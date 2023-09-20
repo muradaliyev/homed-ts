@@ -8,8 +8,6 @@ Sample configuration json with schema enabled
 ```
 {
     "$schema": "https://cdn.jsdelivr.net/gh/muradaliyev/homed-ts/schema/homed-automation-schema.json",
-    "automations": [],
-    "timestamp": 1694690184,
-    "version": "1.0.12"
+    "automations": []
 }
 ```
